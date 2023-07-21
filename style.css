@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+  margin: 0 50px;
+  background-color: #e5e5e5;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  background-color: #fff;
+  width: 300px;
+  height: 500px;
+  border: 5px solid #8ac3d1;
+  border-radius: 8px;
+  padding: 15px;
+  overflow-y: scroll;
+}
+
+.app::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+#addNew {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(138, 195, 209, 0.35);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addNew .fa-plus {
+  background-color: #8ac3d1;
+  padding: 3px;
+  border-radius: 3px;
+  transition: transform 0.3s ease-in-out; /* Animation for spin effect */
+}
+
+#addNew:hover .fa-plus {
+  transform: rotate(180deg); /* Spin effect on hover */
+}
+
+#tasks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+#tasks div {
+  border: 3px solid #8ac3d1;
+  background-color: #d3e5ea;
+  border-radius: 6px;
+  padding: 5px;
+  display: grid;
+  gap: 4px;
+  transition: transform 0.2s ease-in-out; /* Animation for scale effect */
+}
+
+#tasks div:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+#tasks div .options {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+
+#tasks div .options i {
+  cursor: pointer;
+}
+
+#msg {
+  color: red;
+}
